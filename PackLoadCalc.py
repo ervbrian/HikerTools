@@ -62,13 +62,13 @@ def calc_daily_load(base_weight, body_weight, trip_duration, daily_food):
     while day_num <= trip_duration:
         food_weight = (daily_food * (trip_duration - day_num))
         total_pack_weight = (base_weight + food_weight)
-        pct_body_weight = (total_pack_weight / body_weight) * 100
+        pct_body_weight = round((total_pack_weight / body_weight) * 100, 2)
 
         # consolidate weight stats into dictionary
         day_stats = {'day_num': day_num,
                      'food_weight': food_weight,
                      'total_pack_weight': total_pack_weight,
-                     'pct_body_weight': round(pct_body_weight, 3)
+                     'pct_body_weight': pct_body_weight
                      }
 
         # append dictionary to table
