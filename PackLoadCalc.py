@@ -10,7 +10,7 @@
 Purpose: Calculate pack weight stats based on body weight and trip duration
 
 Usage:
-    python PackLoadCalc.py <base_weight> <body_weight> <trip_duration>
+    python PackLoadCalc.py
 
 Steps:
     1) Gather pack weight, body weight and food requirement details
