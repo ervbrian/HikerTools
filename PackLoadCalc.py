@@ -4,7 +4,8 @@
 # Date: Feb 16, 2019
 # ChangeLog: (When, Who, What)
 #  2019-02-16, Brian Ervin, Created Version 1.0
-#  2018-02-16, Brian Ervin, Updated output_csv() function
+#  2019-02-16, Brian Ervin, Updated output_csv() function
+#  2019-02-16, Brian Ervin, Updated output_json() function
 # ----------------------------- #
 
 """
