@@ -4,6 +4,7 @@
 # Date: Feb 16, 2019
 # ChangeLog: (When, Who, What)
 #  2019-02-16, Brian Ervin, Created Version 1.0
+#  2018-02-16, Brian Ervin, Updated output_csv() function
 # ----------------------------- #
 
 """
@@ -89,25 +90,24 @@ def output_csv(daily_weight_percentage_table, output_file):
     :return: None
     """
 
-    csv_data = ""
-
     # generate csv header
     header = ""
     for key in daily_weight_percentage_table[0].keys():
         header += (key + ',')
 
-    csv_data += (header + "\n")
-
-    # generate csv data
-    for row in daily_weight_percentage_table:
-        for key in row.keys():
-            csv_data += (str(row[key]) + ',')
-        csv_data += '\n'
-
-    # write data to file
+    # write csv data to file
     try:
         with open(output_file, "w") as f:
-            f.write(csv_data)
+            # write header
+            f.write(header + '\n')
+
+            # write table data
+            for row in daily_weight_percentage_table:
+                for key in row.keys():
+                    f.write((str(row[key]) + ','))
+                f.write('\n')
+
+            # close file
             f.close()
             print('Successfully wrote data to CSV file...')
     except:
