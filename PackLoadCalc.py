@@ -124,11 +124,9 @@ def output_json(daily_weight_percentage_table, output_file):
     :return: None
     """
 
-    json_data = json.dumps(daily_weight_percentage_table, indent=4, sort_keys=True)
-
     try:
         with open(output_file, "w") as f:
-            f.write(json_data)
+            f.write(json.dumps(daily_weight_percentage_table, indent=4, sort_keys=True))
             f.close()
             print('Successfully wrote data to JSON file...')
     except:
