@@ -7,7 +7,7 @@
 # ----------------------------- #
 
 """
-Purpose: Calculate pack weigh stats based on body weight and trip duration
+Purpose: Calculate pack weight stats based on body weight and trip duration
 
 Usage:
     python PackLoadCalc.py <base_weight> <body_weight> <trip_duration>
