@@ -6,6 +6,7 @@
 #  2019-02-16, Brian Ervin, Created Version 1.0
 #  2019-02-16, Brian Ervin, Updated output_csv() function
 #  2019-02-16, Brian Ervin, Updated output_json() function
+#  2019-02-17, Brian Ervin, Removed variables used for testing in main()
 # ----------------------------- #
 
 """
@@ -24,7 +25,6 @@ Steps:
 import json
 import sys
 import matplotlib.pyplot as plt
-
 
 def fetch_details():
 
@@ -185,16 +185,8 @@ def plot_data(daily_weight_percentage_table, hike_name):
 
 def main():
 
-    # gather details from user if no script parameters are given
-    # generate static input variables for calculations if "test" is set as parameter 1
-    if sys.argv[1] == "test":
-        base_weight = 16.0
-        body_weight = 200
-        trip_duration = 8
-        daily_food = 2
-        hike_name = "Test Hike"
-    else:
-        hike_name, base_weight, body_weight, trip_duration, daily_food = fetch_details()
+    # gather details from user
+    hike_name, base_weight, body_weight, trip_duration, daily_food = fetch_details()
 
     # calculate pack weight statistics
     # store in list of dictionary objects
@@ -207,4 +199,4 @@ def main():
 
 
 if __name__ == '__main__':
-  main()
+    main()
