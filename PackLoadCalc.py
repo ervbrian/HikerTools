@@ -207,4 +207,5 @@ def main():
     plot_data(daily_weight_percentage_table, hike_name)
 
 
-main()
+if __name__ == '__main__':
+  main()
