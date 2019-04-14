@@ -1,0 +1,20 @@
+## Multi-Proc | 4 Cores ##
+186590d2efe7:HikingScripts ervbrian$ time python3 HikeTracker.py
+Found 23 GPX files to process ...
+[..snipped..]
+Writing data to HikeData.csv ...
+
+real	0m32.651s
+user	1m42.168s
+sys	0m1.054s
+
+
+## Single Process ##
+186590d2efe7:HikingScripts ervbrian$ time python3 HikeTracker.py
+Found 23 GPX files to process ...
+[..snipped..]
+Writing data to HikeData.csv ...
+
+real	0m56.981s
+user	0m56.320s
+sys	0m0.336s
