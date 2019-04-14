@@ -1,4 +1,4 @@
-## Multi-Proc | 4 Cores ##
+## Single Process ##
 186590d2efe7:HikingScripts ervbrian$ time python3 HikeTracker.py
 Found 23 GPX files to process ...
 [..snipped..]
@@ -9,7 +9,7 @@ user	1m42.168s
 sys	0m1.054s
 
 
-## Single Process ##
+## Multi-Proc | 4 Cores ##
 186590d2efe7:HikingScripts ervbrian$ time python3 HikeTracker.py
 Found 23 GPX files to process ...
 [..snipped..]
