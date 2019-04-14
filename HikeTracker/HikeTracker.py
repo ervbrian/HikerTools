@@ -64,7 +64,6 @@ def main():
             f.write(csv_header)
             for hike in hike_object_list:
                 f.write(hike.ToString())  # Write hike CSV data row
-        f.close()
     except Exception as e:
         print('Error writing data to {}: {}'.format(f, e))
 
