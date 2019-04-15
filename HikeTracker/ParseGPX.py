@@ -20,15 +20,10 @@ class ParseGPX():
         """Generate coordinate list from gpx file"""
 
         coords = []
-        lats = []
-        lons = []
 
         # grab all trkpt objects from gpx file
         for point in soup.findAll('trkpt'):
-            lat, lon = point['lat'], point['lon']
-            lats.append(lat)
-            lons.append(lon)
-            coord = (lat, lon)
+            coord = (point['lat'], point['lon'])
             coords.append(coord)
 
         return coords
@@ -95,3 +90,4 @@ class ParseGPX():
             total_distance += geodesic(hike.coordinates[i], hike.coordinates[i - 1]).miles
 
         return round(total_distance, 2)
+
